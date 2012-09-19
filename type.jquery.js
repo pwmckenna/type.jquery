@@ -12,7 +12,6 @@
             delay = Math.floor(Math.random() * 1000) + MAX_DELAY;
         else 
             delay = 0;
-        console.log(ch, delay);
         return delay;
     }
     function getRandomDelay() {

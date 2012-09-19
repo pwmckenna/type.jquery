@@ -1,0 +1,63 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+<script src="underscore.js"></script>
+<script src="type.jquery.js"></script>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<style type="text/css">
+	body {
+		font-family: 'Courier New';
+		background: url(exclusive_paper.png);
+	}
+	.container {
+		width: 500px;
+		background: white;
+		border: 1px solid #ddd;
+		padding: 75px;
+		margin-top: 100px;
+		margin-bottom: 100px;
+		height: 700px;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div id="title"></div>
+		<div id="poem"></div>
+		<div id="signature"></div>
+	</div>
+<script>
+	var title = 'Alone\n\n';
+	var poem = 
+'From childhood\'s hour I have not been\n' +
+'As others were- I have not seen\n' +
+'As others saw- I could not bring\n' +
+'My passions from a common spring-\n' +
+'From the same source I have not taken\n' +
+'My sorrow- I could not awaken\n' +
+'My heart to joy at the same tone-\n' +
+'And all I lov\'d- I lov\'d alone-\n' +
+'\n' + 
+'Then- in my childhood- in the dawn\n' +
+'Of a most stormy life- was drawn\n' +
+'From ev\'ry depth of good and ill\n' +
+'The mystery which binds me still-\n' +
+'From the torrent, or the fountain-\n' +
+'From the red cliff of the mountain-\n' +
+'From the sun that \'round me roll\'d\n' +
+'In its autumn tint of gold-\n' +
+'From the lightning in the sky\n' +
+'As it passed me flying by-\n' +
+'From the thunder, and the storm-\n' +
+'And the cloud that took the form\n' +
+'(When all the rest of Heaven was blue)\n' +
+'Of a demon in my view.\n\n';
+	var signature = '- Edgar Allan Poe';
+
+	$('#title').type(title);
+	$('#poem').type(poem);
+	$('#signature').type(signature);
+</script>
+
+</body>
+</html>
