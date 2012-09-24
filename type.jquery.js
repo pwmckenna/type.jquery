@@ -1,5 +1,8 @@
 (function($){
-    var MAX_DELAY = 150;
+    var NORMAL_DELAY = 150;
+    var SLOW_DELAY = 2 * NORMAL_DELAY;
+    var SLOWER_DELAY = 4 * SLOW_DELAY;
+    
     function assert(condition, err) { if(!condition)console.error(err); }
     function decodeChar(ch) {
         if(ch === '\n') ch = '<br>';
@@ -9,15 +12,15 @@
     function getCharacterDelay(ch) {
         var delay;
         if(!ch.match(/[a-z ]/i))
-            delay = Math.floor(Math.random() * 1000) + MAX_DELAY;
+            delay = Math.floor(Math.random() * SLOWER_DELAY) + NORMAL_DELAY;
         else 
             delay = 0;
         return delay;
     }
     function getRandomDelay() {
-        var normal = Math.floor(Math.random() * MAX_DELAY);
-        var slow = Math.random() > 0.9 ? 300 : 0;
-        var slower = Math.random() > 0.985 ? 1200 : 0;
+        var normal = Math.floor(Math.random() * NORMAL_DELAY);
+        var slow = Math.random() > 0.9 ? SLOW_DELAY : 0;
+        var slower = Math.random() > 0.985 ? SLOWER_DELAY : 0;
         return normal + slow + slower;
     }
 
